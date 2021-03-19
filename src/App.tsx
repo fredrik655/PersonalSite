@@ -1,12 +1,17 @@
 import React from 'react';
 import "./scss/style.scss";
+import NavBar from './components/NavBar';
+import Intro from './components/Intro';
+import Skills from 'components/Skills';
 
 
 const App: React.FC = ()  => {
   return (
-    <div className="bg-primary">
-      <h1>Hello World</h1>
-    </div>
+    <React.Fragment>
+    <NavBar />
+    <Intro />
+    <Skills />
+    </React.Fragment>
   )
 }
 

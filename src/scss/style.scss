@@ -4,7 +4,10 @@ h1 {
   color: $text-color;
 }
 
-div {
-  width: 100px;
-  height: 100px;
+.test {
+  height: 1000px;
+}
+
+#intro-header {
+  height: 50vh;
 }
