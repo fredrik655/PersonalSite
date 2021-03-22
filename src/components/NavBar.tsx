@@ -24,7 +24,7 @@ const NavBar: React.FC<PropsInterface> = (props) => {
             <a className="nav-link" href="#">Github</a>
           </li>
         </ul>
-        <ul className=" navbar-nav navbar-collapse">
+        <ul className="navbar-nav navbar-collapse">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
               <button className="btn btn-outline-light btn-sm nav-item">Dark Theme</button>

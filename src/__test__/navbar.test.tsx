@@ -1,10 +1,13 @@
 import React from 'react';
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen, fireEvent, cleanup} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import NavBar from '../components/NavBar';
 
 describe('<NavBar />', () => {
+  afterEach(() => {
+    cleanup();
+  });
   test('should display a navbar', async () => {
     render(<NavBar />);
 
@@ -20,5 +23,7 @@ describe('<NavBar />', () => {
 
     fireEvent.click(screen.getByText('Home'));
     expect(handleClick).toHaveBeenCalledTimes(1);
-  })
-})
+  });
+});
+
+
