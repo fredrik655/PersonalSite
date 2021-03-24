@@ -11,3 +11,7 @@ h1 {
 #intro-header {
   height: 50vh;
 }
+
+.btn:focus {
+  box-shadow: none !important;
+}
