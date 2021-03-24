@@ -1,4 +1,4 @@
-import themeReducer from '../reducers/themeReducer';
+import themeReducer from '../components/reducers/themeReducer';
 
 
 describe('test reducer actions', () => {
