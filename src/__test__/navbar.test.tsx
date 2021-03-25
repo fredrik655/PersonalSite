@@ -19,7 +19,7 @@ describe('<NavBar />', () => {
 
   test('click triggers event', () => {
     const handleClick = jest.fn();
-    render(<NavBar onClick={handleClick}/>);
+    render(<NavBar />);
 
     fireEvent.click(screen.getByText('Home'));
     expect(handleClick).toHaveBeenCalledTimes(1);
