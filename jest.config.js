@@ -8,7 +8,10 @@ module.exports = {
     "**/?(*.)+(spec|test).+(ts|tsx|js)"
   ],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest"
+    "^.+\\.(ts|tsx)$": "ts-jest",
   },
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"]
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  moduleNameMapper: {
+    "\\.svg": "<rootDir>/custom.d.ts"
+  }
 }
