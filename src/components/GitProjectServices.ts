@@ -1,5 +1,18 @@
 import {dataType} from './types';
 import {compareAsc} from 'date-fns';
+
+const parseRawData = (data):dataType[] => {
+  const parsedData = data.map(item => {
+    return {
+      repoName: item.name,
+      description: item.description,
+      created: item.created_at,
+      lastUpdated: item.updated_at,
+      githubLink: item.html_url
+    }
+  });
+  return parsedData;
+}
 const parseDate = (date:string): string => {
   return date.slice(0,10);
 }
@@ -84,4 +97,4 @@ const sortData = (data:dataType[], sortName:string):dataType[] => {
   
 }
 
-export {parseDate, sortData, parseAllDate};
+export {parseDate, sortData, parseAllDate, parseRawData};

@@ -1,7 +1,43 @@
-import {parseDate, sortData, parseAllDate} from '../components/GitProjectServices';
+import {parseDate, sortData, parseAllDate, parseRawData} from '../components/GitProjectServices';
 import {dataType} from '../components/types';
 
 describe('git projects services', () => {
+
+  test('transform date to right format', () => {
+    const data = [
+      {
+        name: 'battleship',
+        description: '--- The Odin Project --- assignment Battleship',
+        created_at: '2021-01-03T08:00:56Z',
+        updated_at: '2021-01-11T16:38:43Z',
+        html_url: 'https://github.com/fredrik655/battleship'
+      },
+      {
+        name: 'test',
+        description: '--- The Odin Project --- assignment Battleship',
+        created_at: 'test',
+        updated_at: '2021-01-11T16:38:43Z',
+        html_url: 'https://github.com/fredrik655/battleship'
+      },
+    ];
+
+    const parsedData = parseRawData(data);
+    expect(parsedData[0]).toEqual({
+      repoName: 'battleship',
+      description: '--- The Odin Project --- assignment Battleship',
+      created: '2021-01-03T08:00:56Z',
+      lastUpdated: '2021-01-11T16:38:43Z',
+      githubLink: 'https://github.com/fredrik655/battleship'
+    });
+    expect(parsedData[1]).toEqual({
+      repoName: 'test',
+      description: '--- The Odin Project --- assignment Battleship',
+      created: 'test',
+      lastUpdated: '2021-01-11T16:38:43Z',
+      githubLink: 'https://github.com/fredrik655/battleship'
+    });
+
+  })
 
   test('transform date to right format', () => {
     const date = '2021-03-13T10:10:10Z';
