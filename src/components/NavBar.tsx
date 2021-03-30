@@ -1,18 +1,23 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, {Dispatch} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { ToggleAction } from './redux-actions/themeActions';
 
 
-interface PropsInterface {
-  onClick?: () => void;
-}
+const NavBar: React.FC = () => {
+  const toggle = useSelector(state => state);
+  const dispatch = useDispatch<Dispatch<ToggleAction>>();
 
-const NavBar: React.FC<PropsInterface> = (props) => {
+  const handleToggleTheme = () => {
+    dispatch({type: 'theme/toggle'});
+  }
+
   return (
-    <nav className="navbar navbar-dark bg-dark sticky-top navbar-expand-md">
+    <nav className={`navbar ${(toggle ? 'navbar-dark bg-dark' : 'navbar-light bg-light')} sticky-top navbar-expand-md`}>
       <div className="container-fluid">
         <ul className="navbar-nav navbar-collapse col">
           <li className="nav-item">
-            <a className="nav-link" href="#" onClick={props.onClick}>Home</a>
+            <a className="nav-link" href="#" >Home</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">Skills</a>
@@ -27,7 +32,9 @@ const NavBar: React.FC<PropsInterface> = (props) => {
         <ul className="navbar-nav navbar-collapse">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <button className="btn btn-outline-light btn-sm nav-item">Dark Theme</button>
+              <button className={`btn ${(toggle ? 'btn-outline-light' : 'btn-outline-dark')} btn-sm nav-item`} onClick={handleToggleTheme} >
+                {toggle ? 'Dark Theme' : 'Light Theme'}
+              </button>
             </li>
           </ul>
           
