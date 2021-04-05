@@ -9,12 +9,12 @@ const Intro: React.FC = () => {
   const propsName = useSpring({config: {duration: 3000}, opacity: 1, from: {opacity: 0}});
   const propsDev = useSpring({config: {duration: 3000}, opacity: 1, from: {opacity: 0}, delay: 1000});
   return (
-    <div className={`d-flex flex-column justify-content-center align-items-center px-3 py-3 ${(state ? 'bg-light' : 'bg-dark')}`} id="intro-header">
+    <div className={`d-flex flex-column justify-content-center align-items-center px-3 py-3 text-center ${(state ? 'bg-light' : 'bg-dark')}`} id="intro-header">
       <div className="row">
-        <animated.h2 style={propsName} className={`fw-bold fs-6-sm ${(state ? 'text-dark' : 'text-light')}`}>Fredrik Träpja</animated.h2>
+        <animated.h2 style={propsName} className={`fw-bold intro-text ${(state ? 'text-dark' : 'text-light')}`}>Fredrik Träpja</animated.h2>
       </div>
       <div className="row">
-        <animated.h2 style={propsDev} className={`fw-bold fs-6-sm ${(state ? 'text-dark' : 'text-light')}`}>Frontend Developer</animated.h2>
+        <animated.h2 style={propsDev} className={`fw-bold intro-text ${(state ? 'text-dark' : 'text-light')}`}>Frontend Developer</animated.h2>
       </div>
     </div>
   );
