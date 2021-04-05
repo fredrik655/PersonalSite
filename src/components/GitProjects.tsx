@@ -4,10 +4,13 @@ import {parseAllDate, parseRawData} from './GitProjectServices';
 import {dataType} from './types';
 import GitProjectCards from './GitProjectCards';
 import GitProjectsFilter from './GitProjectsFilter';
+import { useSelector } from 'react-redux';
 
 // https://api.github.com/users/fredrik655/repos
 
+
 const GitProjects: React.FC = () => {
+  const toggle = useSelector(state => state);
   const [data, setData] = useState<dataType[]>([]);
   const [filter, setFilter] = useState<string>('update-date-newest');
 
@@ -43,10 +46,10 @@ const GitProjects: React.FC = () => {
   },[]);
 
   return(
-    <React.Fragment>
+    <div className={`row mx-0 container-fluid g-0 pt-5 ${toggle ? 'bg-light text-dark': 'bg-dark text-light'}`}>
       <GitProjectsFilter func={handleFilterChange}/>
       <GitProjectCards data={data} order={filter}/>
-    </React.Fragment>
+    </div>
   );
 }
 
