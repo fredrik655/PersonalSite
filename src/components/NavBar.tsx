@@ -13,33 +13,26 @@ const NavBar: React.FC = () => {
   }
 
   return (
-    <nav className={`navbar ${(toggle ? 'navbar-dark bg-dark' : 'navbar-light bg-light')} sticky-top navbar-expand-md`}>
-      <div className="container-fluid">
-        <ul className="navbar-nav navbar-collapse col">
-          <li className="nav-item">
-            <a className="nav-link" href="#" >Home</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Skills</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Projects</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Github</a>
-          </li>
-        </ul>
+    <nav className={`navbar navbar-dark ${(toggle ? 'bg-dark' : 'bg-dark-mode-white')} sticky-top navbar-expand-md`}>
         <ul className="navbar-nav navbar-collapse">
-          <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-              <button className={`btn ${(toggle ? 'btn-outline-light' : 'btn-outline-dark')} btn-sm nav-item`} onClick={handleToggleTheme} >
-                {toggle ? 'Dark Theme' : 'Light Theme'}
-              </button>
-            </li>
-          </ul>
-          
+          <li className="nav-item">
+            <a className="nav-link"  href="#" >Home</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#skills-target">Skills</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#projects-target">Projects</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#git-target">Github</a>
+          </li>
+          <li className="nav-item mx-2">
+            <button className={`btn btn-outline-light btn-sm nav-item`} onClick={handleToggleTheme} >
+              {toggle ? 'Dark Theme' : 'Light Theme'}
+            </button>
+          </li>
         </ul>
-      </div>
     </nav>
   )
 }
