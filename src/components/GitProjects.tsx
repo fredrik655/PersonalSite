@@ -38,7 +38,7 @@ const GitProjects: React.FC = () => {
   }
 
   useEffect(() => {
-    axios.get('http://localhost:3001/data').then(response => {
+    axios.get('https://api.github.com/users/fredrik655/repos').then(response => {
       const extractedData = parseRawData(response.data);
       const parsedData:dataType[] = parseAllDate(extractedData);
       setData(parsedData);
