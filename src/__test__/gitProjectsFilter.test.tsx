@@ -28,9 +28,9 @@ describe('git proj btn', () => {
     expect(triggerFunc).toBeCalledTimes(3);
     fireEvent.click(screen.getByText('Date created oldest'));
     expect(triggerFunc).toBeCalledTimes(4);
-    fireEvent.click(screen.getByText('last updated newest'));
+    fireEvent.click(screen.getByText('Last updated newest'));
     expect(triggerFunc).toBeCalledTimes(5);
-    fireEvent.click(screen.getByText('last updated oldest'));
+    fireEvent.click(screen.getByText('Last updated oldest'));
     expect(triggerFunc).toBeCalledTimes(6);
 
   });

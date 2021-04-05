@@ -12,6 +12,7 @@ module.exports = {
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   moduleNameMapper: {
-    "\\.svg": "<rootDir>/custom.d.ts"
+    "\\.svg": "<rootDir>/custom.d.ts",
+    "\\.png": "<rootDir>/custom.d.ts"
   }
 }
