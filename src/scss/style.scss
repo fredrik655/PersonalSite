@@ -1,4 +1,67 @@
 $text-color: red;
+$bg-color: #f8f9fa;
+
+#root {
+  background-color: $bg-color;
+}
+
+.intro-text {
+  font-size: 2rem;
+  @media screen and (max-width: 576px){
+    font-size: 1.2rem;
+  }
+  
+}
+
+.sub-title {
+  font-size: 2rem;
+  @media screen and (max-width: 576px){
+    font-size: 1.2rem;
+  }
+  
+}
+
+.git-card-title {
+  font-size: 1.5rem;
+  @media screen and (max-width: 576px){
+    font-size: 1.2rem;
+  }
+}
+
+.date-text {
+  font-size: 1rem;
+  @media screen and (max-width: 576px){
+    font-size: 0.7rem;
+  }
+}
+
+.git-icon {
+  width: 45px;
+  @media screen and (max-width: 576px){
+    width: 40px;
+  }
+}
+
+.tag-text {
+  font-size: 0.8rem;
+  @media screen and (max-width: 576px){
+    font-size: 0.7rem;
+  }
+}
+
+.skill-text {
+  font-size: 0.8rem;
+  @media screen and (max-width: 576px){
+    font-size: 0.7rem;
+  }
+}
+
+.bg-dark-mode-white {
+  background-color: #1f1f1f;
+}
+.card-img {
+  max-width: 1000px;
+}
 
 h1 {
   color: $text-color;
