@@ -46,12 +46,13 @@ describe('e2e test page', function() {
   })
 
   it('sort git projects by date', function() {
-    cy.get('.btn').last().click();
-    cy.get('[data-filterid="3"]').click();
+    
+    cy.get('.btn').last().click({force: true});
+    cy.get('[data-filterid="3"]').click({force: true});
     cy.get('.git-card-title').first().should('have.text', ' Repo name: test2');
 
-    cy.get('.btn').last().click();
-    cy.get('[data-filterid="4"]').click();
+    cy.get('.btn').last().click({force: true});
+    cy.get('[data-filterid="4"]').click({force: true});
     cy.get('.git-card-title').first().should('have.text', ' Repo name: test3');
   })
 
