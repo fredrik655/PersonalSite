@@ -12,11 +12,11 @@ const data = [{
     imgNumb: 1
   },
   {
-    title: 'Using bootstrap',
-    text: 'Cloning Newsweek with the aim to practice using bootstrap',
-    tags: ['html', 'css', 'bootstrap'],
-    githubLink: 'https://github.com/fredrik655/usingbootstrap',
-    siteLink: 'https://fredrik655.github.io/usingbootstrap',
+    title: 'Shopping cart mockup',
+    text: 'Basic shopping cart site.',
+    tags: ['html', 'css', 'Javascript', 'react'],
+    githubLink: 'https://github.com/fredrik655/shopping-cart',
+    siteLink: 'https://fredrik655.github.io/shopping-cart',
     imgNumb: 2
   },
   {

@@ -2,7 +2,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import battleshipimg from '../images/battleship.png';
 import ResumeSiteImg from '../images/ResumeSite.png';
-import newsweekImg from '../images/newsweek.png';
+import shoppingImg from '../images/shoppingCart.png';
 
 
 interface propsInterface {
@@ -23,7 +23,7 @@ const ProjectCard: React.FC<propsInterface> = (props: propsInterface) => {
       return ResumeSiteImg;
     }
     else if(numb === 2) {
-      return newsweekImg;
+      return shoppingImg;
     }
     else {
       return battleshipimg;
