@@ -64,6 +64,10 @@ const Skills: React.FC = () =>  {
               <p className="skill-text">React</p>
             </div>
             <div className="rounded bg-light m-3 border-dark border d-flex flex-column justify-content-between align-items-center" style={{maxWidth: "150px"}}>
+              <img className="m-2 p-2" style={{width: "100px"}} src={reactLogo} alt=""/>
+              <p className="skill-text">React Native</p>
+            </div>
+            <div className="rounded bg-light m-3 border-dark border d-flex flex-column justify-content-between align-items-center" style={{maxWidth: "150px"}}>
               <img className="m-2 p-2" style={{width: "100px"}} src={reduxLogo} alt=""/>
               <p className="skill-text">Redux</p>
             </div>
