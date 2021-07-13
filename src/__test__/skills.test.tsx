@@ -21,7 +21,7 @@ describe('skills components test', () => {
 
   test('every skill is present', () => {
     const skillsArr = ['HTML', 'Javascript', 'Css', 'Scss', 'Typescript', 'Bootstrap', 'React',
-      'Redux', 'Jest', 'Cypress', 'Webpack', 'Git', 'Github/Github Actions'];
+      'Redux', 'Jest', 'Cypress', 'Webpack', 'Git', 'Github/Github Actions', 'React Native'];
 
     render(
       <Provider store={store}>
